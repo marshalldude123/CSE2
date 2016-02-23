@@ -26,10 +26,6 @@ public class ToHex{
         redValue = myScanner.nextInt();
         greenValue = myScanner.nextInt();
         blueValue = myScanner.nextInt();
-        }
-        catch (InputMismatchException e){
-            System.out.println("Sorry, your input must consist of integers.");
-            }
         //
         // Make sure they are in the range from 0-255
         if (redValue>=0 && redValue<=255 && greenValue>=0 && greenValue<=255 && blueValue>=0 && blueValue<=255){
@@ -187,6 +183,11 @@ public class ToHex{
         else {
             System.out.println("Sorry must enter values between 0 and 255.");
         }
+        
+        }
+        catch (InputMismatchException e){
+            System.out.println("Sorry, your input must consist of integers.");
+            }
         
     }// End of main method
 }// End of class
