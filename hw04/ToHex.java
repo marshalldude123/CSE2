@@ -184,10 +184,10 @@ public class ToHex{
             System.out.println("Sorry must enter values between 0 and 255.");
         }
         
-        }
+        }// End of try statement
         catch (InputMismatchException e){
             System.out.println("Sorry, your input must consist of integers.");
-            }
+            }// End of catch statement
         
     }// End of main method
 }// End of class
