@@ -185,7 +185,7 @@ public class ToHex{
         }
         
         }// End of try statement
-        catch (InputMismatchException e){
+        catch (InputMismatchException a){
             System.out.println("Sorry, your input must consist of integers.");
             }// End of catch statement
         

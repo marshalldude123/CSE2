@@ -10,10 +10,11 @@ public class Convert {
         Scanner myScanner = new Scanner(System.in);
         // Ask the user for input
         System.out.print("Enter the distance in meters: ");
-        // Ask for user input
+        // Create variable for user input to be stored
         double userMeter = myScanner.nextDouble();
         // Convert meters to inches
         double calculatedInches = (userMeter * 100 ) / 2.54;
+        // Print out data
         System.out.println(userMeter + " meters is " + calculatedInches + " inches.");
         
     }// End of main method

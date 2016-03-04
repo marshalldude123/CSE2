@@ -12,17 +12,16 @@ public class HelloWorld{
     
     // Add a main method
     public static void main(String[] args) {
-        
-        // Print statement with a box
-        System.out.println("#######################");
-        System.out.println("#######################");
-        System.out.println("#                     #");
-        System.out.println("# Hello World 2016!!! #");
-        System.out.println("#                     #");
-        System.out.println("#######################");
-        System.out.println("#######################");
-        System.out.println("test");
-        
-        
-    }
-}
+       
+//   print the statement with box around it
+     System.out.println("###########################");
+     System.out.println("###########################");
+     System.out.println("####                   ####");
+     System.out.println("#### Hello World 2016! ####");
+     System.out.println("####                   ####");
+     System.out.println("###########################");
+     System.out.println("###########################");
+     System.out.println("test");
+     
+    } // End of main method
+} // End of class
