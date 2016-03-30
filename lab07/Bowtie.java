@@ -30,7 +30,7 @@ public class Bowtie{
                     
                     
                     for(i = 1; i<=nStar; i+=2){
-                        for(j = 0; j<(nStar-i); j++){
+                        for(j = 0; j<=(nStar-i); j++){
                             System.out.print("*");
                         }// End of printing for
                         System.out.println();
@@ -83,26 +83,28 @@ public class Bowtie{
                                 m +=15;
                                 break;
                             case 29:
-                                m +=15;
+                                m +=16;
                                 break;
-                            case 31:
-                                m +=17;
-                                break;
-                            case 33:
-                                m +=18;
-                                break;
+                            
                         }
                     }// End of Bowtie for
-                   for(i=1; i<=nStar; i+=2){
+                    m = 1;
+                   for(i=2; i<=nStar; i+=2){
+                       for(int k = 0; k<=(nStar- i - 2); k++){
+                               System.out.print(" ");
+                           }
+                           System.out.print("\b");
                        for(j=nStar; j>=(nStar-i); j--){
                            System.out.print("*");
                        }
                        System.out.println();
-                       while(m<=1){
-                            System.out.print(" ");
-                            m++;
+                      
                         }
-                        switch (i){
+                        /*while(m>=1){
+                            System.out.print(".");
+                            m--;
+                        }
+                         switch (i){
                             case 1:
                                 m +=2;
                                 break;
@@ -146,22 +148,13 @@ public class Bowtie{
                                 m +=15;
                                 break;
                             case 29:
-                                m +=15;
+                                m +=16;
                                 break;
-                            case 31:
-                                m +=17;
-                                break;
-                            case 33:
-                                m +=18;
-                                break;
+                            
                         }
-                   }
+                        
                     
-                    
-                    
-                    
-                    
-                }// End of if with code
+                */}// End of if with code
                 else{
                     nStar = 0;
                     System.out.println("Please enter a number between and including 3 and 33.");// Print error
