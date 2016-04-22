@@ -4,6 +4,34 @@
 // This program will create a user input array, search through that array using linear search
 import java.util.Scanner; // Import scanner
 public class CSE2Linear{
+    public static void binarySearch(int [] array, int input){
+        int lowBound = 0;
+        int highBound = 14;
+        int middleValue = 0;
+        boolean done = false;
+        int count = 1;
+        while(!done){
+            middleValue = (int) (((highBound - lowBound)/2) + lowBound);
+            if (array[middleValue]==input){
+                System.out.println("The value was found in " + count + " iterations.");
+                done = true;
+                break;
+            }
+            if (array[middleValue] < input){
+                lowBound = middleValue + 1;
+                count++;
+            }
+            if (array[middleValue] > input){
+                highBound = middleValue - 1;
+                count++;
+            }
+            if(lowBound == highBound) {
+                System.out.println("Value was not found.");
+                done = true;
+                break;
+            }
+        }
+    }
     // Create search method
      public static void linearSearch(int[] array, int input){
          // Create some variables
@@ -97,7 +125,7 @@ public class CSE2Linear{
         System.out.println("Please enter a number to be searched for: ");
         int key = myScanner.nextInt();
         // Call searcing method
-        linearSearch(array1, key);
+        binarySearch(array1, key);
         // Scramble the array
         array1 = scramble(array1);
         // Print scrambled array

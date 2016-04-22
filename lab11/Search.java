@@ -24,9 +24,9 @@ public class Search{
        int highBound = 50;
        int upperValue = 0;
        int lowerValue = 0;
-       boolean found = false;
-       while(!found){
-           int middleValue = (highBound - lowBound)/2;
+       
+       while(lowBound <= highBound){
+           int middleValue = lowBound + (highBound - lowBound)/2;
            if (array[middleValue]>input){
                highBound = middleValue - 1;
                upperValue = array[middleValue];
@@ -37,13 +37,13 @@ public class Search{
            }
            else if (array[middleValue] == input){
                System.out.println("The number was found.");
-               found = true;
+               
            }
            else if (lowBound == highBound){
                System.out.println("The value was not found.");
                System.out.println("The value above the key: " + upperValue);
                System.out.println("The value below the key: " + lowerValue);
-               return;
+               
            }
        }
         
