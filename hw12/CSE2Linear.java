@@ -5,32 +5,36 @@
 import java.util.Scanner; // Import scanner
 public class CSE2Linear{
     public static void binarySearch(int [] array, int input){
-        int lowBound = 0;
-        int highBound = 14;
-        int middleValue = 0;
-        boolean done = false;
-        int count = 1;
-        while(!done){
-            middleValue = (int) (((highBound - lowBound)/2) + lowBound);
-            if (array[middleValue]==input){
-                System.out.println("The value was found in " + count + " iterations.");
-                done = true;
-                break;
-            }
-            if (array[middleValue] < input){
-                lowBound = middleValue + 1;
-                count++;
-            }
-            if (array[middleValue] > input){
-                highBound = middleValue - 1;
-                count++;
-            }
-            if(lowBound == highBound) {
-                System.out.println("Value was not found.");
-                done = true;
-                break;
-            }
+        int position;
+       int comparisonCount = 1; 
+        int lowerbound = 0;
+        int upperbound = array.length;
+     // To start, find the subscript of the middle position.
+     position = ( lowerbound + upperbound) / 2;
+
+     while((array[position] != key) && (lowerbound <= upperbound))
+     {
+         comparisonCount++;
+         if (array[position] > key)             // If the number is > key, ..
+         {                                              // decrease position by one. 
+              upperbound = position - 1;   
+         }                                                             
+              else                                                   
+        {                                                        
+              lowerbound = position + 1;    // Else, increase position by one. 
         }
+       position = (lowerbound + upperbound) / 2;
+     }
+     if (lowerbound <= upperbound)
+     {
+           System.out.println("The number was found in array subscript" + position);
+           System.out.println("The binary search found the number after " + comparisonCount +
+                 "comparisons.");
+           // printing the number of comparisons is optional
+     }
+     else{
+          System.out.println("Sorry, the number is not in this array.  The binary search made "+comparisonCount  + " comparisons.");
+    }
     }
     // Create search method
      public static void linearSearch(int[] array, int input){

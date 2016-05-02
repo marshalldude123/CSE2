@@ -7,9 +7,6 @@ public class Bowtie{
     public static void main(String [] args){
         Scanner myScanner = new Scanner(System.in);// Create scanner
         int nStar = 0;// Create star variable
-        int i;
-        int j;
-        int m = 1;
         while (nStar <= 0){
             System.out.print("Please enter the number of stars to be printed: ");// Ask for a number
             // Check to see if it is an integer
@@ -23,138 +20,29 @@ public class Bowtie{
                 }
                 if ((nStar>=3) && (nStar<=33)){
                     
-                    
-                    
-                    
-                    
-                    
-                    
-                    for(i = 1; i<=nStar; i+=2){
-                        for(j = 0; j<=(nStar-i); j++){
-                            System.out.print("*");
-                        }// End of printing for
+                  int radius = (nStar/2) + 2;
+
+                    for (int i = -radius; i <= radius; i++) {
+                        for (int j = -radius; j <= radius; j++) {
+                            if (i*i <= j*j) System.out.print(" ");
+                            else            System.out.print("*");
+                        }
                         System.out.println();
+                    }
+                
+                   
                         
-                        while(m>=1){
-                            System.out.print(" ");
-                            m--;
-                        }
-                        switch (i){
-                            case 1:
-                                m +=2;
-                                break;
-                            case 3:
-                                m +=3;
-                                break;
-                            case 5:
-                                m +=4;
-                                break;
-                            case 7:
-                                m +=5;
-                                break;
-                            case 9:
-                                m +=6;
-                                break;
-                            case 11:
-                                m +=7;
-                                break;
-                            case 13:
-                                m +=8;
-                                break;
-                            case 15:
-                                m +=9;
-                                break;
-                            case 17:
-                                m +=10;
-                                break;
-                            case 19:
-                                m +=11;
-                                break;
-                            case 21:
-                                m +=12;
-                                break;
-                            case 23:
-                                m +=13;
-                                break;
-                            case 25:
-                                m +=14;
-                                break;
-                            case 27:
-                                m +=15;
-                                break;
-                            case 29:
-                                m +=16;
-                                break;
-                            
-                        }
-                    }// End of Bowtie for
-                    m = 1;
-                   for(i=2; i<=nStar; i+=2){
-                       for(int k = 0; k<=(nStar- i - 2); k++){
-                               System.out.print(" ");
-                           }
-                           System.out.print("\b");
-                       for(j=nStar; j>=(nStar-i); j--){
-                           System.out.print("*");
-                       }
-                       System.out.println();
-                      
-                        }
-                        /*while(m>=1){
-                            System.out.print(".");
-                            m--;
-                        }
-                         switch (i){
-                            case 1:
-                                m +=2;
-                                break;
-                            case 3:
-                                m +=3;
-                                break;
-                            case 5:
-                                m +=4;
-                                break;
-                            case 7:
-                                m +=5;
-                                break;
-                            case 9:
-                                m +=6;
-                                break;
-                            case 11:
-                                m +=7;
-                                break;
-                            case 13:
-                                m +=8;
-                                break;
-                            case 15:
-                                m +=9;
-                                break;
-                            case 17:
-                                m +=10;
-                                break;
-                            case 19:
-                                m +=11;
-                                break;
-                            case 21:
-                                m +=12;
-                                break;
-                            case 23:
-                                m +=13;
-                                break;
-                            case 25:
-                                m +=14;
-                                break;
-                            case 27:
-                                m +=15;
-                                break;
-                            case 29:
-                                m +=16;
-                                break;
-                            
-                        }
                         
-                    
-                */}// End of if with code
+                        
+                        
+                        
+                        
+                        
+                        
+                        
+                        
+                        
+                       }// End of if with code
                 else{
                     nStar = 0;
                     System.out.println("Please enter a number between and including 3 and 33.");// Print error
